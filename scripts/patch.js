@@ -118,6 +118,7 @@ const translationEngine = `
   const isZh = (currentLang === 'zh');
 
   const dict = {
+    // Left Sidebar
     "New Conversation": "新建对话",
     "Conversation History": "历史会话",
     "Scheduled Tasks": "定时任务",
@@ -125,6 +126,7 @@ const translationEngine = `
     "Conversations": "会话列表",
     "Settings": "设置",
     
+    // Sidebar Settings Categories
     "General": "常规",
     "Account": "账户",
     "Agent": "智能体",
@@ -136,6 +138,7 @@ const translationEngine = `
     "Provide Feedback": "提供反馈",
     "Appearance": "外观",
     
+    // Settings Main Panel & Headings
     "Manage project folders, agent settings, and permissions.": "管理项目文件夹、智能体设置与权限。",
     "Configure agent execution, queued message delivery, and permissions.": "配置智能体执行、排队消息投递及权限。",
     "Agent settings and permissions for conversations outside of projects.": "配置非项目环境下会话的智能体设置和权限。",
@@ -149,6 +152,7 @@ const translationEngine = `
     "Security Preset": "安全预设",
     "Choose a predefined security preset for the agent. This controls terminal auto-execution policy, and file access policy.": "选择预设的安全级别。这控制了终端自动执行策略和文件访问策略。",
     
+    // Dropdown options & descriptions
     "Default": "默认",
     "Requires manual review for all terminal commands and file accesses outside of the working folders.": "对所有终端命令以及工作文件夹外的文件访问都需要手动确认。",
     "Full machine": "全机访问",
@@ -168,6 +172,7 @@ const translationEngine = `
     "Also includes global settings when working in this project.": "在此项目中工作时也包含全局设置。",
     "Learn more.": "了解更多。",
     
+    // Permission Headings & Cards
     "File Access Rules": "文件访问规则",
     "Configure allowed and denied paths for file reads and writes.": "配置允许或拒绝的文件读取与写入路径。",
     "Network Access Rules": "网络访问规则",
@@ -185,6 +190,7 @@ const translationEngine = `
     "Terminal & Tooling Permissions": "终端与工具权限",
     "Open": "打开",
     
+    // Browser Settings Tab
     "Browser Settings": "浏览器设置",
     "Configure the browser subagent. It requires ": "配置浏览器子智能体。其运行需要安装 ",
     " to be installed. The browser subagent can be invoked by typing /browser in the conversation input box.": "。您可以在对话框中输入 /browser 调用浏览器子智能体。",
@@ -199,6 +205,7 @@ const translationEngine = `
     "Browser Actuation Rules": "浏览器动作执行规则",
     "Configure allowed and denied URLs for browser actuation.": "配置允许与拒绝进行浏览器动作执行的 URL 规则。",
     
+    // App Settings Tab
     "App Settings": "应用首选项",
     "Manage application settings.": "管理应用配置。",
     "Notifications": "系统通知",
@@ -225,6 +232,7 @@ const translationEngine = `
     "Open System Preferences": "打开系统设置",
     "Advanced Settings": "高级设置",
     
+    // Customizations Tab
     "Configure default behaviors, skills, and MCP servers. Learn more.": "配置默认行为、技能（Skills）以及 MCP 服务。了解更多。",
     "The breakdown below shows token usage from customizations like skills, rules, and MCP. If the budget is exceeded, large customizations will be truncated automatically.": "下方的细目显示了由于技能、规则和 MCP 等自定义内容占用的 Token 用量。如果超出预算，大型自定义内容将被自动截断。",
     "Installed MCP Servers": "已安装的 MCP 服务端",
@@ -237,6 +245,7 @@ const translationEngine = `
     "Customize": "自定义",
     "Global": "全局",
     
+    // Appearance Tab
     "Configure the agent's visual theme and display preferences.": "配置智能体的视觉主题及显示偏好。",
     "Chat Settings": "聊天设置",
     "Verbose Agent Chat": "详细对话日志",
@@ -251,9 +260,10 @@ const translationEngine = `
     "Default Light": "默认浅色",
     "Default Dark": "默认深色",
     
+    // Account Tab
     "Manage your plan, credentials, and general preferences.": "管理您的订阅计划、凭据以及常规偏好。",
     "Enable Telemetry": "启用遥测与分析",
-    "When toggled on, Antigravity collects usage data to help Google enhance performance and features.": "开启后，Antigravity 将收集使用数据，以帮助 Google 优化性能与功能。",
+    "When toggled on, Antigravity collects usage data to help Google enhance performance and features.": "开启后，Antigravity 将收集使用 data，以帮助 Google 优化性能与功能。",
     "Marketing Emails": "营销邮件",
     "Receive product updates, tips, and promotions from Google Antigravity via email.": "通过电子邮件接收来自 Google Antigravity 的产品更新、提示和促销信息。",
     "Your Plan: Google AI Pro": "您的订阅计划：Google AI Pro",
@@ -264,6 +274,7 @@ const translationEngine = `
     "Terms of Service": "服务条款",
     "By using this app, you agree to its Terms of Service": "使用此应用即表示您同意其服务条款",
     
+    // Models Tab
     "Active Model": "当前激活模型",
     "Choose which model to use.": "选择要使用的 AI 模型。",
     "Model Selection": "模型选择",
@@ -272,23 +283,27 @@ const translationEngine = `
     "Enable AI Credit Overages": "启用超额 AI 额度",
     "When toggled on, Antigravity will use your AI credits to fulfill model requests once you're out of model quota. Antigravity will always use your model quota first before using AI credits.": "开启后，当您的模型配额用尽时，Antigravity 将使用您的 AI 额度来处理模型请求。Antigravity 将始终优先使用您的模型配额，然后再使用 AI 额度。",
     "Model Quota": "模型配额",
-    "Within each group, models share a weekly limit and a 5-hour limit. Quota is consumed proportionally to the cost of the tokens. Thus, limits will last longer with shorter tasks or using more cost-effective models. The 5-hour limit smooths out aggregate demand to fairly distribute global capacity across all users, while your weekly limit is tied directly to your individual tier.": "在每个分组中，模型共享周限制和 5 小时限制。配额按消耗 Token 的比例进行应答扣除。因此，执行较短的任务或使用更具性价比的模型会使限制持续更久。5 小时限制可以平滑总体需求，以公平地在所有用户之间分配全球算力，而您的周限制则直接与您的个人订阅层级挂钩。",
+    "Within each group, models share a weekly limit and a 5-hour limit. Quota is consumed proportionally to the cost of the tokens. Thus, limits will last longer with shorter tasks or using more cost-effective models. The 5-hour limit smooths out aggregate demand to fairly distribute global capacity across all users, while your weekly limit is tied directly to your individual tier.": "在每个分组中，模型共享周限制 and 5 小时限制。配额按消耗 Token 的比例进行应答扣除。因此，执行较短的任务或使用更具性价比的模型会使限制持续更久。5 小时限制可以平滑总体需求，以公平地在所有用户之间分配全球算力，而您的周限制则直接与您的个人订阅层级挂钩。",
     "Gemini Models": "Gemini模型",
     "Weekly Limit": "周限制",
     "Five Hour Limit": "五小时限制",
     
+    // Danger Zone
     "Danger Zone": "危险区域",
     "Delete Project": "删除项目",
     
+    // Customizations Tab categories
     "Skills": "技能 (Skills)",
     "Rules": "规则 (Rules)",
     "Plugins": "插件 (Plugins)",
     "MCP Servers": "MCP 服务端",
     
+    // Account Tab categories
     "Logged in as": "登录身份为",
     "Sign Out": "注销登录",
     "Sign In": "登录账号",
     
+    // Buttons & Dialogs
     "Task": "任务列表",
     "Walkthrough": "运行报告",
     "Cancel": "取消",
@@ -301,14 +316,17 @@ const translationEngine = `
     "Ok": "确定",
     "Apply": "应用",
     
+    // Placeholders & Inputs
     "Ask anything, @ to mention, / for actions": "问任何问题，输入 @ 提及，/ 触发快捷指令",
     "Ask anything, @ to mention...": "问任何问题，输入 @ 提及...",
     
+    // Time & Status
     "seconds ago": "秒前",
     "minutes ago": "分钟前",
     "hours ago": "小时前",
     "days ago": "天前",
     
+    // Workflow / Agent steps
     "Working.": "正在运行...",
     "Working": "正在运行...",
     "Finished": "已完成",
@@ -319,7 +337,12 @@ const translationEngine = `
     "Viewed": "已查看",
     "Searching": "正在搜索",
     "Found": "已找到",
+    "Continue": "继续",
     
+    // Common errors
+    "Our servers are experiencing high traffic right now, please try again in a minute.": "我们的服务器目前负载过高，请一分钟后再试。",
+    
+    // Menu items (Top bar)
     "File": "文件",
     "View": "视图",
     "Window": "窗口",
@@ -331,7 +354,11 @@ const translationEngine = `
     return timeStr.replace(/days?/g, '天')
                    .replace(/hours?/g, '小时')
                    .replace(/minutes?/g, '分钟')
-                   .replace(/seconds?/g, '秒');
+                   .replace(/seconds?/g, '秒')
+                   .replace(/(\\d+)\\s*d/g, '$1天')
+                   .replace(/(\\d+)\\s*h/g, '$1小时')
+                   .replace(/(\\d+)\\s*m/g, '$1分钟')
+                   .replace(/(\\d+)\\s*s/g, '$1秒');
   }
 
   function translateText(text) {
@@ -380,8 +407,10 @@ const translationEngine = `
       return '插件: ' + match[1];
     }
     
-    if (/worked for (\\d+m\\s*)?(\\d+s)/i.test(trimmed)) {
-      return text.replace(/worked for /i, '运行耗时 ');
+    if (/worked for (.+)/i.test(trimmed)) {
+      const match = trimmed.match(/worked for (.+)/i);
+      const duration = translateDuration(match[1]);
+      return '运行耗时 ' + duration;
     }
     
     if (/^(\\d+)\\s+files\\s+changed$/i.test(trimmed)) {
